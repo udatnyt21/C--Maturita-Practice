@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using C__Maturita_Practice.Data;
+
 namespace C__Maturita_Practice
 {
     public class Program
@@ -8,6 +11,9 @@ namespace C__Maturita_Practice
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<MyDBContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnectionString")));
 
             var app = builder.Build();
 
