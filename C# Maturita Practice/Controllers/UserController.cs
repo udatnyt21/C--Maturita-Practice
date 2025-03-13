@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using C__Maturita_Practice.Models;
 using C__Maturita_Practice.Data;
+using BCrypt.Net;
 
 namespace C__Maturita_Practice.Controllers
 {
@@ -40,6 +41,11 @@ namespace C__Maturita_Practice.Controllers
 
             if (existingUser != null)
                 return RedirectToAction("Register");
+
+
+            User user = new User() { Name = Name, Password = BCrypt.Net.BCrypt.HashPassword(Password, BCrypt.Net.BCrypt.GenerateSalt())};
+            database.Users.Add(user);
+            database.SaveChanges();
 
             return RedirectToAction("Login");
         }
