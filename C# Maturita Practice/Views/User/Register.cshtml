@@ -1,1 +1,10 @@
 ﻿<h2>Register</h2>
+
+<form action="/User/Register" method="post">
+    <input type="text" name="Name" placeholder="Your username..." /> <br>
+    <input type="password" name="Password" placeholder="Your password..." /><br>
+    <input type="password" name="PasswordCheck" placeholder="Password again..." /><br>
+    <p>Do you agree with using your user data for AI model training?</p>
+    <input type="checkbox" name="AIConsent" placeholder="AASAS" />
+    <input type="Submit" value="Register!" />
+</form>
