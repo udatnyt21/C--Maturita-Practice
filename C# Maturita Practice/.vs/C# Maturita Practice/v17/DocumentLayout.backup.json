@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\udatnyt21\\Desktop\\C#\\C--Maturita-Practice\\C# Maturita Practice\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C443EB22-37DB-462D-9C6C-1AA0D5B8B558}|C# Maturita Practice.csproj|c:\\users\\udatnyt21\\desktop\\c#\\c--maturita-practice\\c# maturita practice\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C443EB22-37DB-462D-9C6C-1AA0D5B8B558}|C# Maturita Practice.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C443EB22-37DB-462D-9C6C-1AA0D5B8B558}|C# Maturita Practice.csproj|c:\\users\\udatnyt21\\desktop\\c#\\c--maturita-practice\\c# maturita practice\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C443EB22-37DB-462D-9C6C-1AA0D5B8B558}|C# Maturita Practice.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C443EB22-37DB-462D-9C6C-1AA0D5B8B558}|C# Maturita Practice.csproj|c:\\users\\udatnyt21\\desktop\\c#\\c--maturita-practice\\c# maturita practice\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C443EB22-37DB-462D-9C6C-1AA0D5B8B558}|C# Maturita Practice.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C443EB22-37DB-462D-9C6C-1AA0D5B8B558}|C# Maturita Practice.csproj|c:\\users\\udatnyt21\\desktop\\c#\\c--maturita-practice\\c# maturita practice\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{C443EB22-37DB-462D-9C6C-1AA0D5B8B558}|C# Maturita Practice.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
@@ -19,6 +31,43 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\udatnyt21\\Desktop\\C#\\C--Maturita-Practice\\C# Maturita Practice\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\udatnyt21\\Desktop\\C#\\C--Maturita-Practice\\C# Maturita Practice\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T07:18:12.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\udatnyt21\\Desktop\\C#\\C--Maturita-Practice\\C# Maturita Practice\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\udatnyt21\\Desktop\\C#\\C--Maturita-Practice\\C# Maturita Practice\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T07:18:08.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\udatnyt21\\Desktop\\C#\\C--Maturita-Practice\\C# Maturita Practice\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\udatnyt21\\Desktop\\C#\\C--Maturita-Practice\\C# Maturita Practice\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T07:17:56.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\udatnyt21\\Desktop\\C#\\C--Maturita-Practice\\C# Maturita Practice\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
@@ -26,8 +75,7 @@
               "RelativeToolTip": "wwwroot\\js\\site.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-13T07:16:44.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T07:16:44.271Z"
             },
             {
               "$type": "Bookmark",
