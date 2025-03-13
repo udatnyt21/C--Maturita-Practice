@@ -21,23 +21,39 @@ namespace C__Maturita_Practice.Controllers
         [HttpGet]
         public IActionResult Register()
         {
-            
+            ViewData["Title"] = "Register";
+            return View();
         }
         [HttpPost]
-        public IActionResult Register(string Name, string Password, string PasswordCheck , bool AIConsent)
+        public IActionResult Register(string Name, string Password, string PasswordCheck, string AIConsent)
         {
+            Name = Name.Trim();
+            Password = Password.Trim();
+            PasswordCheck = PasswordCheck.Trim();
 
+            if (AIConsent != "on")
+                return RedirectToAction("Register");
+            if (Name == null || Password == null || PasswordCheck == null || Password != PasswordCheck)
+                return RedirectToAction("Register");
+
+            User? existingUser = database.Users.Where(user => user.Name == Name).FirstOrDefault();
+
+            if (existingUser != null)
+                return RedirectToAction("Register");
+
+            return RedirectToAction("Login");
         }
 
         [HttpGet]
         public IActionResult Login()
         {
-
+            ViewData["Title"] = "Login";
+            return View();
         }
         [HttpPost]
         public IActionResult Login(string Name, string Password)
         {
-
+            return RedirectToAction("Profile");
         }
 
 
