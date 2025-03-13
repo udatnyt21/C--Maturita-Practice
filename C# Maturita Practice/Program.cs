@@ -15,6 +15,14 @@ namespace C__Maturita_Practice
             builder.Services.AddDbContext<MyDBContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnectionString")));
 
+            builder.Services.AddSession(options =>
+            {
+                options.Cookie.Name = "Practice";
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.IsEssential = true;
+            });
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -31,6 +39,8 @@ namespace C__Maturita_Practice
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.MapControllerRoute(
                 name: "default",
