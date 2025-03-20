@@ -59,7 +59,29 @@ namespace C__Maturita_Practice.Controllers
         [HttpPost]
         public IActionResult Login(string Name, string Password)
         {
+            Name = Name.Trim();
+            Password = Password.Trim();
+
+            if (Name == null || Password == null)
+                return RedirectToAction("Login");
+
+
+            User? UserToCheck = database.Users.Where(user => user.Name == Name).FirstOrDefault();
+
+            if (!BCrypt.Net.BCrypt.Verify(Password, UserToCheck.Password))
+                return RedirectToAction("Login");
+
+            HttpContext.Session.SetString("LoggedUserName", UserToCheck.Name);
+
+            ViewData["Title"] = "Login";
             return RedirectToAction("Profile");
+        }
+        [HttpGet]
+        public IActionResult Profile()
+        {
+            ViewData["LoggedUser"] = HttpContext.Session.GetString("LoggedUserName");
+
+            return View();
         }
 
 
