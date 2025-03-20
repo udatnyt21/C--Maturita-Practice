@@ -7,6 +7,8 @@ namespace C__Maturita_Practice.Models
         [Key]
         public int ID { get; set; }
         [Required]
+        public int Owner {  get; set; }
+        [Required]
         public string Title { get; set; }
         [Required]
         public string Text { get; set; }
