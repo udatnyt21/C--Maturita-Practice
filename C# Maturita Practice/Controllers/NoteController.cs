@@ -17,7 +17,7 @@ namespace C__Maturita_Practice.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(String Title, String Text, String isImportant)
+        public IActionResult Create(String Title, String Text, String IsImportant)
         {
             return RedirectToAction("Profile", "User");
         }
