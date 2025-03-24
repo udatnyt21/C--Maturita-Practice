@@ -10,4 +10,9 @@
 @foreach (C__Maturita_Practice.Models.Note note in Model){
     <h4>@note.Title</h4>
     <p>@note.Text</p>
+
+    <form method="post" action="/Note/SetImportant">
+        <input hidden type="number" value="@note.ID" name="NoteID" />
+        <input type="submit" value="Change Importance" />
+    </form>
 }

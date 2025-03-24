@@ -52,8 +52,12 @@ namespace C__Maturita_Practice.Controllers
             return RedirectToAction("Profile", "User");
         }
         [HttpPost]
-        public IActionResult SetImportant()
+        public IActionResult SetImportant(int NoteID)
         {
+            Note NoteUpdate = database.Notes.Find(NoteID);
+            NoteUpdate.Important = !NoteUpdate.Important;
+            database.SaveChanges();
+
             return RedirectToAction("Profile", "User");
         }
     }
