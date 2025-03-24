@@ -81,6 +81,9 @@ namespace C__Maturita_Practice.Controllers
         [HttpGet]
         public IActionResult Profile(string displayImportant)
         {
+            if (HttpContext.Session.GetInt32("LoggedID") == null)
+                return RedirectToAction("Login");
+
             int userID = HttpContext.Session.GetInt32("LoggedID").Value;
             ViewData["LoggedUser"] = HttpContext.Session.GetString("LoggedUserName");
             

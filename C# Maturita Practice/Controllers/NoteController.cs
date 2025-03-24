@@ -47,8 +47,11 @@ namespace C__Maturita_Practice.Controllers
             return RedirectToAction("Profile", "User");
         }
         [HttpPost]
-        public IActionResult Delete()
+        public IActionResult Delete(int NoteID)
         {
+            database.Notes.Remove(database.Notes.Find(NoteID));
+            database.SaveChanges();
+
             return RedirectToAction("Profile", "User");
         }
         [HttpPost]
