@@ -2,6 +2,10 @@
 <h2>Vítej, @ViewData["LoggedUser"]</h2>
 
 <a href="/Note/Create">Create a Note</a>
+<form method="GET" action="/User/Profile">
+    <input type="checkbox" checked name="displayImportant" hidden />
+    <input type="submit" value="Show only important" />
+</form>
 
 @foreach (C__Maturita_Practice.Models.Note note in Model){
     <h4>@note.Title</h4>

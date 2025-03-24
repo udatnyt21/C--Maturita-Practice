@@ -2,6 +2,7 @@
 using C__Maturita_Practice.Models;
 using C__Maturita_Practice.Data;
 using BCrypt.Net;
+using Microsoft.AspNetCore.Components;
 
 namespace C__Maturita_Practice.Controllers
 {
@@ -78,12 +79,18 @@ namespace C__Maturita_Practice.Controllers
             return RedirectToAction("Profile");
         }
         [HttpGet]
-        public IActionResult Profile()
+        public IActionResult Profile(string displayImportant)
         {
-            ViewData["LoggedUser"] = HttpContext.Session.GetString("LoggedUserName");
             int userID = HttpContext.Session.GetInt32("LoggedID").Value;
+            ViewData["LoggedUser"] = HttpContext.Session.GetString("LoggedUserName");
+            
             List<Note> UserNotes = new List<Note>();
-            UserNotes = database.Notes.Where(n => n.Owner == userID).ToList();
+
+            if(displayImportant == "on")
+                UserNotes = database.Notes.Where(n => n.Owner == userID && n.Important == true).ToList();
+            else
+                UserNotes = database.Notes.Where(n => n.Owner == userID).ToList();
+
             UserNotes.Reverse();
 
             return View(UserNotes);
