@@ -66,12 +66,13 @@ namespace C__Maturita_Practice.Controllers
                 return RedirectToAction("Login");
 
 
-            User? UserToCheck = database.Users.Where(user => user.Name == Name).FirstOrDefault();
+            User UserToCheck = database.Users.Where(user => user.Name == Name).FirstOrDefault();
 
             if (!BCrypt.Net.BCrypt.Verify(Password, UserToCheck.Password))
                 return RedirectToAction("Login");
 
             HttpContext.Session.SetString("LoggedUserName", UserToCheck.Name);
+            HttpContext.Session.SetInt32("LoggedID", UserToCheck.ID);
 
             ViewData["Title"] = "Login";
             return RedirectToAction("Profile");
@@ -80,8 +81,12 @@ namespace C__Maturita_Practice.Controllers
         public IActionResult Profile()
         {
             ViewData["LoggedUser"] = HttpContext.Session.GetString("LoggedUserName");
+            int userID = HttpContext.Session.GetInt32("LoggedID").Value;
+            List<Note> UserNotes = new List<Note>();
+            UserNotes = database.Notes.Where(n => n.Owner == userID).ToList();
+            UserNotes.Reverse();
 
-            return View();
+            return View(UserNotes);
         }
 
 

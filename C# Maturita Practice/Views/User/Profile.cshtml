@@ -1,3 +1,9 @@
-﻿<h2>Vítej, @ViewData["LoggedUser"]</h2>
+﻿@model List<C__Maturita_Practice.Models.Note>
+<h2>Vítej, @ViewData["LoggedUser"]</h2>
 
 <a href="/Note/Create">Create a Note</a>
+
+@foreach (C__Maturita_Practice.Models.Note note in Model){
+    <h4>@note.Title</h4>
+    <p>@note.Text</p>
+}
